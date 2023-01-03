@@ -12,7 +12,8 @@
 
 <body>
     <div id="root">
-        <h1>Welcome Messege using HTML</h1>
+        <h1>Heading1 using HTML</h1>
+        <h2>Heading2 using HTML</h2>
     </div>
     <script>
         // Welcome Messege using JavaScript
@@ -23,9 +24,19 @@
 
         // Welcome Messege using React**********************
 
-        const heading = React.createElement('span', null, 'Welcome Message using React');
+        // const heading = React.createElement('span', null, 'Welcome Message using React');
+        // const root = ReactDOM.createRoot(document.getElementById('root'));
+        // root.render(heading);
+
+        // addding two child element using react
+
+        const heading1 = React.createElement('h1', null, 'Heading1 using React');
+        const heading2 = React.createElement('h2', null, 'Heading2 using React');
+
+        const container = React.createElement('div', { class: 'container' }, [heading1, heading2]);
+
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(heading);
+        root.render(container);
     </script>
 </body>
 
